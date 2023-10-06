@@ -2,16 +2,26 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Entrée with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        // Press Maj+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Maj+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        int[] numbers = {1, 2, 3, 4, 5};
+        int sum = calculateSum(numbers);
+        System.out.println("La somme est: " + sum);
+        double average = calculateAverage(numbers);
+        System.out.println("La moyenne est: " + average);
     }
+
+    public static int calculateSum(int[] array) {
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        return sum;
+    }
+    public static double calculateAverage(int[] array) {
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        return (double) sum / array.length;
+    }
+
 }
